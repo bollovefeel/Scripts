@@ -364,19 +364,9 @@ function CastE()
         CastSpell(_E, myHero)
     end
 end
- 
- 
-function CastR()
-    if not RREADY then return end
-    if ValidTarget(ts.target) then
-        if GetDistance(ts.target) <= 625 and RREADY and myHero:GetSpellData(_R).name ~= "ZedR2" then
-            CastSpell(_R, ts.target)
-        end
-    else
-        return 
-    end
-end
- 
+
+
+
 function rUsed()
         if myHero:GetSpellData(_R).name == "ZedR2" then
                 return true
